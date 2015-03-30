@@ -1,0 +1,19 @@
+<script>
+  (function() {
+    var answer = 42;
+
+    var guess = prompt('Guess the number.');
+    guess = Number.parseInt(guess);
+    while (true) {
+      if (guess === answer) {
+        alert('You got it, congrats!');
+        break;
+      } else if (guess < answer) {
+        guess = Number.parseInt(prompt('Too low, guess again'));
+      } else if (guess > answer) {
+        guess = Number.parseInt(prompt('Too high, guess again'));
+      }
+    }
+
+  })();
+</script>
