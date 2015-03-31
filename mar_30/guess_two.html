@@ -5,15 +5,17 @@
     var guess = prompt('Guess the number.');
     guess = Number.parseInt(guess);
     while (true) {
+      if (Number.isNaN(guess)) {
+        guess = Number.parseInt(prompt('That wasn\'t a number, try again'))
+      }
       if (guess === answer) {
         alert('You got it, congrats!');
         break;
       } else if (guess < answer) {
-        guess = Number.parseInt(prompt('Too low, guess again'));
+        guess = Number.parseInt(prompt('Too low, guess again your guess was: ' + guess));
       } else if (guess > answer) {
-        guess = Number.parseInt(prompt('Too high, guess again'));
+        guess = Number.parseInt(prompt('Too high, guess again, your guess was: ' + guess));
       }
     }
-
   })();
 </script>

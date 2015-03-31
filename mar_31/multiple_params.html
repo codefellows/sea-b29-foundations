@@ -1,0 +1,13 @@
+<script>
+  (function() {
+    var greet = function(name, age) {
+      console.log('hello ' + name + ' you are ' + age + ' years old');
+    };
+
+    greet('The Doctor', 500);
+    greet('The Doctor');
+    greet(undefined, 500);
+
+    window.greet = greet;
+  })();
+</script>

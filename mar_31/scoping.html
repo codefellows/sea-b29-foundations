@@ -1,0 +1,34 @@
+<script>
+  var age = 42;
+  (function() {
+    var name = 'Ford Prefect';
+    var greet = function(name) {
+      console.log('hello ' + name);
+    };
+
+    var greet2 = function() {
+      console.log('hello2 ' + name);
+    };
+
+    var greet3 = function(name) {
+      console.log('name: ' + name + ' age: ' + age);
+    };
+
+    var greet4 = function(name, age) {
+      age = age || 32;
+      console.log('from greet4 name: ' + name + ' age: ' + age);
+    };
+
+    greet('Zaphod');
+    console.log(name);
+    greet();
+
+    greet2('Zaphod');
+    console.log(name);
+    greet2();
+
+    greet3('Arthur Dent');
+
+    greet4('Bilbo'); 
+  })();
+</script>
