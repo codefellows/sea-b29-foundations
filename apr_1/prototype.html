@@ -1,0 +1,20 @@
+<script>
+  (function() {
+    var Student = function(name) {
+      this.name = name;
+    };
+
+    Student.prototype.getName = function() {
+      return this.name;
+    };
+
+    Student.prototype.setName = function(name) {
+      this.name = name;
+    };
+
+    var zaphod = new Student('not zaphod');
+    console.log('before set: ' + zaphod.getName());
+    zaphod.setName('zaphod'); 
+    console.log('after ' + zaphod.getName());
+  })();
+</script>

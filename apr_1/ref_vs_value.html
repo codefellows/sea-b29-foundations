@@ -1,0 +1,19 @@
+<script>
+  (function() {
+    var myVar1 = 42;
+    var myVar2 = myVar1;
+    myVar1 = 35;
+
+    console.log('value1 ' + myVar1);
+    console.log('value2 ' + myVar2);
+
+    var myObj1 = {value: 42};
+    var myObj2 = myObj1;
+    var myObj3 = myObj2;
+    myObj1.value = 35;
+
+    console.log('object1 value ' + myObj1.value);
+    console.log('object2 value ' + myObj2.value);
+    console.log('object3 value ' + myObj3.value);
+  })();
+</script>

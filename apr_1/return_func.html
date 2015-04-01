@@ -1,0 +1,17 @@
+<script>
+  (function() {
+    var frist_greet = function(name) {
+      return 'hello ' + name;
+    };
+
+    var greet = function(name) {
+      var greeting = 'hello ' + name;
+      return greeting;
+    };
+
+    var greet2 = function() {
+      return greet('Zaphod');
+    };
+    alert(greet2());
+  })();
+</script>

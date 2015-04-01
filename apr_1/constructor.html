@@ -1,0 +1,19 @@
+<script>
+  (function() {
+    var Student = function(name) {
+      this.name = name;
+      this.getName = function() {
+        return this.name;
+      };
+      this.setName = function(name) {
+        this.name = name;
+      };
+    };
+
+    window.ford = new Student();
+    window.ford.setName('Ford Prefect');
+
+    window.zaphod = new Student('Zaphod');
+    window.Student = Student;
+  })();
+</script>

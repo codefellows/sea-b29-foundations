@@ -1,0 +1,31 @@
+<script>
+  (function() {
+    if (true === false) {
+      console.log('never see this');
+    } else if('red' === 'blue') {
+      console.log('also never shown'); 
+    } else {
+      console.log('this will execute');
+    }
+
+    if (true === false || 'red' === 'blue') {
+      console.log('never shown');
+    } else {
+      console.log('this will execute 2');
+    }
+
+    if ((true === false || 'red' === 'blue') || true === true) {
+      console.log('never shown, except here');
+    } else {
+      console.log('this will execute or will it? (it won\'t)');
+    }
+
+    if ((true === false || 'red' === 'blue') && true === true) {
+      console.log('never shown');
+    } else {
+      console.log('this will execute or will it? (it totes will)');
+    }
+
+
+  })();
+</script>
