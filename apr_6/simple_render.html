@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<main id="content"></main>
+
+  <script>
+    var Tweet = function(text, userName) {
+      this.text = text;
+      this.userName = userName;
+    };
+
+    Tweet.prototype.render = function() {
+      var el = document.createElement('p');
+      el.innerHTML = this.userName + ': ' + this.text;
+      return el;
+    };
+
+    var tweet = new Tweet('I saw a bird', 'Tyler');
+    var tweet2 = new Tweet('I saw another bird', 'Tyler');
+    var tweet3 = new Tweet('Wow, that is awesome', 'Some Person');
+    var tweet4 = new Tweet('Thanks Obama!', 'reddit');
+    var main = document.getElementById('content');
+    main.appendChild(tweet.render());
+    main.appendChild(tweet2.render());
+    main.appendChild(tweet3.render()); 
+
+    var tweet4El = document.createElement('p');
+    tweet4El.innerHTML = tweet4.userName + ': ' + tweet4.text;
+    main.appendChild(tweet4El);
+  </script>
+</body>
+</html>

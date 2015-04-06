@@ -1,0 +1,16 @@
+<script>
+  var Hobbit = function(name, str, sly, height) {
+    this.name = name;
+    this.str = str;
+    this.sly = sly;
+    this.height = height;   
+  };
+
+  var player = new Hobbit('bilbo', 3);
+  var fight = function() {
+    var answer = prompt('drink the shake?');
+    if (answer === 'yes') {
+      player.str++;
+    }
+  }
+</script>

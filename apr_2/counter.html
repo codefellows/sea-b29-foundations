@@ -1,0 +1,17 @@
+<script>
+  var counter = 0;
+
+  var gotIt = false;
+  for (var guesses = 1; guesses <= 5; guesses++) {
+    var guess = prompt("what is your guess?");
+    if (guess === '42') {
+      gotIt = true;
+      break;
+    }
+  }
+  if (gotIt) {
+    alert('you got it in ' + guesses + ' guesses');
+  } else {
+    alert('you did not get it in ' + guesses + ' guesses');
+  }
+</script>

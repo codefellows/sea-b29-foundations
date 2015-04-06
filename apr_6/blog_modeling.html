@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<main id="content"></main>
+
+  <script>
+    var User = function(name) {
+      this.name = name;
+    };
+
+    User.prototype.render = function() {
+      var el = document.createElement('address');
+      el.innerHTML = 'by: ' + this.name; 
+      return el;
+    };
+
+    var Comment = function(text, author) {
+      this.text = text;
+      this.author = author;
+    };
+
+    Comment.prototype.render =  function() {
+      var el = document.createElement('p');
+      el.innerText = this.text;
+      el.appendChild(this.author.render());
+      return el;
+    };
+
+    var Post = function(content, author, comments) {
+      this.content = content;
+      this.author = author;
+      this.comments = comments || [];
+    };
+
+    Post.prototype.addComment = function(comment) {
+      this.comments.push(comment);
+    };
+
+    Post.prototype.render = function() {
+      var el = document.createElement('article');
+      el.innerHTML = '<h1>Blog Post:</h1>';
+
+      var contentEl = document.createElement('p');
+      var commentsEl = document.createElement('div');
+
+      contentEl.innerHTML = this.content;
+
+      el.appendChild(contentEl);
+      el.appendChild(this.author.render());
+
+      commentsEl.innerHTML = '<h1>Comments</h1>';
+       
+      for (var i = 0; i < this.comments.length; i++) {
+        commentsEl.appendChild(this.comments[i].render());
+      } 
+
+      el.appendChild(commentsEl);
+      return el;
+    };
+
+    var zaphod = new User('Zaphod Beeblebrox');
+    var ford = new User('Ford Prefect');
+
+    var post1 = new Post('I saw a bird today, it was awesome!', zaphod);
+    post1.addComment(new Comment('birds suck', ford));
+    post1.addComment(new Comment('also, you are not a president', ford));
+
+    var main = document.getElementById('content'); 
+    main.appendChild(post1.render());
+  </script>
+</body>
+</html>

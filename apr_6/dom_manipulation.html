@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<main id="content"></main>
+
+  <script>
+    (function() {
+      var greeting = document.createElement('h1');
+      greeting.innerHTML = 'Hello World';
+
+      var pTag = document.createElement('p');
+      pTag.innerHTML = 'wow, such tags, so paragaphs';
+
+      var main = document.getElementById('content');
+      var main2 = document.getElementsByTagName('main');
+
+      main.appendChild(greeting);
+      main.appendChild(pTag);
+
+      main.innerHTML = '<h1>A Different h1 tag</h1><p>wow, such changes, so innerHTML</p>';
+    })();
+  </script>
+</body>
+</html>

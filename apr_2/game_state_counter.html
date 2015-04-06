@@ -1,0 +1,19 @@
+<script>
+  var Game = function() {
+    this.guesses = 0;
+    this.makeGuess = function() {
+      this.lastGuess = prompt('What is your guess?');
+      this.guesses++;
+      return this.lastGuess;
+    };
+  }
+
+  var game = new Game();
+  while(game.guesses < 5) {
+    var guess = game.makeGuess();
+    if (guess = '42') {
+      alert('You Got it!');
+      break;
+    }
+  }
+</script>
