@@ -1,0 +1,21 @@
+body {
+  font-family: Georgia, serif;
+  background-color: #D9CB84;
+  color: #302B1D;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+}
+
+input {
+  background-color: #D9CB84;
+  color: #302B1D;
+}
+
+button {
+  background-color: #3F522B;
+  outline-style: none;
+}
+
+

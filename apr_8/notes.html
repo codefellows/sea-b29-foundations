@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Notes App!</title>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <main id="content">
+    <h1>Notes:</h1>
+    <form id="new-note-form">
+      <label for="note">Note:</label>
+      <input name="note" type="text">
+      <label for="author">Author</label>
+      <input name="author" type="text" placeholder="Anonymous">
+      
+      <button type="submit">Create new Note</button>
+    </form>
+
+    <button id="clear-all-notes">Clear All Notes</button>
+    <ul id="notes-list">
+    </ul>
+  </main>
+
+  <script src="note.js"></script>
+  <script src="events.js"></script>
+</body>
+</html>
